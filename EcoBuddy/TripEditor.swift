@@ -11,7 +11,7 @@ struct TripEditor: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Shopping Trips")
+                Text("Items")
                     .font(.system(size: 40))
                     .fontWeight(.black)
                 Spacer()
