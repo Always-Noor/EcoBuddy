@@ -8,16 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+@State private var showNewTask = false
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack {
+                Text("Monthly Footprint")
+                    .font(.system(size: 25))
+                    .fontWeight(.black)
+                Spacer()
+                
+                Button {
+                    showNewTask = true
+                } label: {
+                    Text("+")
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+            } /*Closes Hstack*/
+            .padding()
+            Spacer()
+            
+        } /*Closes Vstack*/
+        
+        if showNewTask {
+            AddMonth()
         }
-        .padding()
-    }
-}
+        
+    } /*Closes Body*/
+    
+} /*Closes Struct*/
+
 
 #Preview {
     ContentView()
