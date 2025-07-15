@@ -24,6 +24,7 @@ struct TripEditor: View {
                 }
             }
             .padding()
+            Spacer()
         }
     }
 }
