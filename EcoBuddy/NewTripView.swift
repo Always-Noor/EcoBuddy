@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct NewTripView: View {
+    @State private var showNewTask = false
+    
     var body: some View {
         VStack {
-            Text("New Trip")
+            Text("New Shopping Trip")
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
