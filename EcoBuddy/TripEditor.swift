@@ -9,7 +9,22 @@ import SwiftUI
 
 struct TripEditor: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Text("Shopping Trips")
+                    .font(.system(size: 40))
+                    .fontWeight(.black)
+                Spacer()
+                Button {
+
+                } label: {
+                    Text("+")
+                        .font(.title)
+                        .fontWeight(.bold)
+                }
+            }
+            .padding()
+        }
     }
 }
 
