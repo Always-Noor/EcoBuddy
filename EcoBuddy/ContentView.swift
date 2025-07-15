@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
 @State private var showNewTask = false
+@Query var toDos: [MonthData]
     
     var body: some View {
         NavigationStack {
@@ -30,6 +32,7 @@ struct ContentView: View {
                 } /*Closes Hstack*/
                 .padding()
                 Spacer()
+                
                 
             } /*Closes Vstack*/
             

@@ -8,10 +8,39 @@
 import SwiftUI
 
 struct TripOverview: View {
+@State private var showNewTask = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        NavigationStack {
+            
+            VStack {
+                HStack {
+                    Text("Monthly Footprint")
+                        .font(.system(size: 25))
+                        .fontWeight(.black)
+                    Spacer()
+                    
+                    Button {
+                        showNewTask = true
+                    } label: {
+                        Text("+")
+                            .font(.title)
+                            .fontWeight(.bold)
+                    }
+                } /*Closes Hstack*/
+                .padding()
+                Spacer()
+                
+            } /*Closes Vstack*/
+            
+            if showNewTask {
+                NewTripView()
+            }
+        } /*Closes Navigation Stack*/
+        
+    } /*Closes Body*/
+    
+} /*Closes Struct*/
 
 #Preview {
     TripOverview()
