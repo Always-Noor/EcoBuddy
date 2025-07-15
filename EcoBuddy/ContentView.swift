@@ -11,29 +11,32 @@ struct ContentView: View {
 @State private var showNewTask = false
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("Monthly Footprint")
-                    .font(.system(size: 25))
-                    .fontWeight(.black)
+        NavigationStack {
+            
+            VStack {
+                HStack {
+                    Text("Monthly Footprint")
+                        .font(.system(size: 25))
+                        .fontWeight(.black)
+                    Spacer()
+                    
+                    Button {
+                        showNewTask = true
+                    } label: {
+                        Text("+")
+                            .font(.title)
+                            .fontWeight(.bold)
+                    }
+                } /*Closes Hstack*/
+                .padding()
                 Spacer()
                 
-                Button {
-                    showNewTask = true
-                } label: {
-                    Text("+")
-                        .font(.title)
-                        .fontWeight(.bold)
-                }
-            } /*Closes Hstack*/
-            .padding()
-            Spacer()
+            } /*Closes Vstack*/
             
-        } /*Closes Vstack*/
-        
-        if showNewTask {
-            AddMonth()
-        }
+            if showNewTask {
+                AddMonth()
+            }
+        } /*Closes Navigation Stack*/
         
     } /*Closes Body*/
     
