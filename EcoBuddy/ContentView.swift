@@ -16,7 +16,17 @@ struct ContentView: View {
         NavigationStack {
             
             VStack {
+                Spacer()
                 HStack {
+                    Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+                        .font(.system(size: 60))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color(red: 0.582, green: 0.637, blue: 0.41))
+                        .padding(.all)
+                    
+                }
+                Spacer()
+                /*HStack {
                     Text("Monthly Footprint")
                         .font(.system(size: 25))
                         .fontWeight(.black)
@@ -31,14 +41,11 @@ struct ContentView: View {
                     }
                 } /*Closes Hstack*/
                 .padding()
-                Spacer()
-                
+                Spacer()*/
                 
             } /*Closes Vstack*/
             
-            if showNewTask {
-                AddMonth()
-            }
+            
         } /*Closes Navigation Stack*/
         
     } /*Closes Body*/
@@ -48,4 +55,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .modelContainer(for: MonthData.self, inMemory: true)
 }

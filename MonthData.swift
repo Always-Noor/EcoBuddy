@@ -11,10 +11,8 @@ import SwiftData
 @Model
 class MonthData {
     var title: String
-    var total: Bool
     
-    init(title: String, total: Int) {
+    init(title: String) {
           self.title = title
-          self.total = total > 0
     }
 }
