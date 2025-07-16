@@ -17,13 +17,11 @@ struct ContentView: View {
             
             VStack {
                 Spacer()
-                HStack {
-                    Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-                        .font(.system(size: 60))
+                NavigationLink(destination: TripOverview()) {
+                    Text("356")
                         .fontWeight(.bold)
                         .foregroundColor(Color(red: 0.582, green: 0.637, blue: 0.41))
                         .padding(.all)
-                    
                 }
                 Spacer()
                 /*HStack {
