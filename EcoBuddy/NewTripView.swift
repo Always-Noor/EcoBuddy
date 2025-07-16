@@ -8,27 +8,46 @@
 import SwiftUI
 
 struct NewTripView: View {
-    @State private var showNewTask = false
-    
+    @State private var selectedOption = "Select an option"
+
     var body: some View {
         VStack {
-            Text("New Shopping Trip")
-                .font(.title)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-            TextField("Name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                .padding()
-                .background(Color(.systemGroupedBackground))
-                .cornerRadius(15)
-                .padding()
-            Button {
+            HStack {
+                Text("Add new item")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+                Spacer()
+                
+                Menu {
+                    Button("Shoes") {
+                        selectedOption = "Shoes"
+                    }
+                    Button("Dress") {
+                        selectedOption = "Dress"
+                    }
+                    Button("Bag") {
+                        selectedOption = "Bag"
+                    }
+                    Button("Others") {
+                        selectedOption = "Others"
+                    }
+                } label: {
+                    Text(selectedOption)
+                        .padding()
+                }
 
+                }
+            }
+            
+            Button {
             } label: {
-                    Text("Save")
+                Text("Save")
             }
         }
     }
-}
 
 #Preview {
     NewTripView()
