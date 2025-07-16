@@ -19,8 +19,10 @@ struct ContentView: View {
                 Spacer()
                 NavigationLink(destination: TripOverview()) {
                     Text("356")
+                        .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(Color(red: 0.582, green: 0.637, blue: 0.41))
+                        .multilineTextAlignment(.center)
                         .padding(.all)
                 }
                 Spacer()
