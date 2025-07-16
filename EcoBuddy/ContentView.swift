@@ -19,7 +19,7 @@ struct ContentView: View {
                 Spacer()
                 NavigationLink(destination: TripOverview()) {
                     Text("356")
-                        .font(.largeTitle)
+                        .font(.system(size: 90))
                         .fontWeight(.bold)
                         .foregroundColor(Color(red: 0.582, green: 0.637, blue: 0.41))
                         .multilineTextAlignment(.center)
