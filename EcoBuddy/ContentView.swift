@@ -15,17 +15,37 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             
-            VStack {
+            ZStack {
+                Color(red: 0.748, green: 0.854, blue: 0.857)
+                    .ignoresSafeArea()
                 Spacer()
-                NavigationLink(destination: TripOverview()) {
+                NavigationLink(destination: TripEditor()) {
                     Text("356")
-                        .font(.system(size: 90))
+                        .font(.custom(
+                            "Earth And Sky", size: 140))
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.582, green: 0.637, blue: 0.41))
+                        .foregroundColor(Color(red: 0.535, green: 0.59, blue: 0.376))
                         .multilineTextAlignment(.center)
                         .padding(.all)
+                        .padding(.bottom, 50.0)
                 }
                 Spacer()
+                
+                NavigationLink(destination: EcoSpark()) {
+                    Image("im1")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.top, 600.0)
+                        .padding(.horizontal, 20.0)
+                    
+                    /*Text("EcoSpark")
+                        .font(.system(size: 45))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color(red: 0.679, green: 0.78, blue: 0.437))
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 650.0)*/
+                }
+                
                 /*HStack {
                     Text("Monthly Footprint")
                         .font(.system(size: 25))
