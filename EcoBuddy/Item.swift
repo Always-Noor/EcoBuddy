@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SwiftData
+
 
 struct InventoryItem: Identifiable {
     let id = UUID()

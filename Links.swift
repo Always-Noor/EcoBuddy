@@ -35,19 +35,20 @@ struct Links: View {
                     .foregroundColor(Color(red: 0.611, green: 0.677, blue: 0.436))
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 290.0)
+                    .padding(.horizontal, 15.0)
             }
             Text("This article talks about about the significant hidden costs of fast fashion, and motivate action by showing how thoughtful consumer choices and systemic shifts in the industry can advance sustainability.")
-                .font(.title3)
+                .font(.body)
                 .multilineTextAlignment(.center)
-                .padding(.bottom, 90.0)
+                .padding(.bottom, 130.0)
                 .padding(.horizontal)
             
             Spacer()
             Image("Image")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fit)
-                .padding(.top, 280.0)
-                .padding(.bottom, 30.0)
+                .padding(.top, 250.0)
+                .padding(.bottom, 40.0)
                 .frame(width: 400.0, height: 450.0)
             Spacer()
             Link(destination: URL(string: "https://www.ethicalconsumer.org/fashion-clothing/carbon-cost-clothing")!) {
@@ -56,14 +57,15 @@ struct Links: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color(red: 0.611, green: 0.677, blue: 0.436))
                     .multilineTextAlignment(.center)
-                    .padding(.top, 450.0)
+                    .padding(.top, 420.0)
                     .padding(.horizontal, 15.0)
             }
             Text("This article informs and guides consumers to learn more about the climate impacts of clothing and provide practical actions they can take to reduce that impact.")
-                .font(.title3)
+                .font(.body)
                 .multilineTextAlignment(.center)
-                .padding(.top, 620.0)
+                .padding(.top, 580.0)
                 .padding(.horizontal, 25.0)
+                .padding(.bottom)
             
             
         } //closes ZStack
