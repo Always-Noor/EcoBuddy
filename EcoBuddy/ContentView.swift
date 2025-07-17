@@ -37,13 +37,12 @@ struct ContentView: View {
                 Spacer()
                     .toolbar {
                         ToolbarItem(placement: .bottomBar) {
-                            NavigationLink(destination: EcoSpark()) {
-                                Image("im1")
+                            NavigationLink(destination: Links()) {
+                                Image("img2")
                                     .resizable()
-                                    .padding(.bottom, 50.0)
-                                    .padding(.top)
+                                    .padding(.bottom, 30.0)
                                     .scaledToFit()
-                                    .frame(width: 250, height: 250)
+                                    .frame(width: 400, height: 250)
                             }
                             
                         }
@@ -51,12 +50,12 @@ struct ContentView: View {
                 
                 Spacer()
                     .toolbar {
-                        NavigationLink(destination: Links()) {
-                            Image("img2")
+                        NavigationLink(destination: EcoSpark()) {
+                            Image("ig1")
                                 .resizable()
-                                .padding(.top, 30.0)
+                                .padding(.top, 50.0)
                                 .scaledToFit()
-                                .frame(width: 400, height: 250)
+                                .frame(width: 400, height: 150)
                         }
                     }
                 
