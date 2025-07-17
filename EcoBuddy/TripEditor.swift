@@ -57,9 +57,3 @@ struct TripEditor: View {
 #Preview {
   TripEditor()
 }
-
-
-
-
-
-
