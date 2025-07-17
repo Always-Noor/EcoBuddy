@@ -8,7 +8,7 @@ struct TripEditor: View {
     "Dress": 22,
     "Jeans": 17,
     "Purse": 14,
-    "T-shirt": 7,
+    "T-Shirt": 7,
     "Long Sleeve Shirt": 10
   ]
   @State private var selectedItem = "Shoes"
@@ -48,7 +48,7 @@ struct TripEditor: View {
                       
                   }
               } //closes VStack
-              .navigationTitle("Items")
+              .navigationTitle("Items & Footprint")
               .padding()
           } //closes Navigation
       }
