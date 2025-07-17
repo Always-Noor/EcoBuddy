@@ -1,28 +1,42 @@
-//
-//  TripEditor.swift
-//  EcoBuddy
-//
-//  Created by Scholar on 7/15/25.
-//
-
 import SwiftUI
 
 struct TripEditor: View {
-    var body: some View {
-        VStack {
-            HStack {
-                Text("Shopping Trips")
-                    .font(.system(size: 40))
-                    .fontWeight(.black)
-                Spacer()
-                Button {
+    let availableItems: [String: Int] = [
+        "Shoes": 14,
+        "Dress": 22,
+        "Jeans": 17,
+        "Purse": 14,
+        "T-shirt": 7,
+        "Long Sleeve Shirt": 10
+    ]
+    
+    @State private var selectedItem = "Shoes"
+    @State private var items: [InventoryItem] = []
 
-                } label: {
-                    Text("+")
-                        .font(.title)
-                        .fontWeight(.bold)
+    var body: some View {
+        NavigationStack {
+            VStack() {
+                
+                List(items) { item in
+                    Text("\(item.name) \(item.carbonFootprint)")
+                }
+                .background(Color.white)
+
+                Picker("Select an item", selection: $selectedItem) {
+                    ForEach(availableItems.keys.sorted(), id: \.self) { item in
+                        Text(item)
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
+                .padding(.horizontal)
+
+                Button("Add Item") {
+                    if let footprint = availableItems[selectedItem] {
+                        items.append(InventoryItem(name: selectedItem, carbonFootprint: footprint))
+                    }
                 }
             }
+            .navigationTitle("Items")
             .padding()
         }
     }
