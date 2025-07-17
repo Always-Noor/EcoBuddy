@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2A85C52E29420C00BD7459 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A85C42E29420B00BD7459 /* Links.swift */; };
 		BD34F40E2E26AE5F00ADA0A5 /* MonthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD34F40D2E26AE5F00ADA0A5 /* MonthData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD2A85C42E29420B00BD7459 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		BD34F3F32E26A65900ADA0A5 /* EcoBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD34F40D2E26AE5F00ADA0A5 /* MonthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +39,7 @@
 		BD34F3EA2E26A65900ADA0A5 = {
 			isa = PBXGroup;
 			children = (
+				BD2A85C42E29420B00BD7459 /* Links.swift */,
 				BD34F40D2E26AE5F00ADA0A5 /* MonthData.swift */,
 				BD34F3F52E26A65900ADA0A5 /* EcoBuddy */,
 				BD34F3F42E26A65900ADA0A5 /* Products */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD34F40E2E26AE5F00ADA0A5 /* MonthData.swift in Sources */,
+				BD2A85C52E29420C00BD7459 /* Links.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
