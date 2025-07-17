@@ -9,8 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-@State private var showNewTask = false
-@Query var toDos: [MonthData]
     
     var body: some View {
         NavigationStack {
@@ -29,41 +27,22 @@ struct ContentView: View {
                         .padding(.all)
                         .padding(.bottom, 50.0)
                 }
+                
                 Spacer()
-                
-                NavigationLink(destination: EcoSpark()) {
-                    Image("im1")
-                        .resizable(resizingMode: .stretch)
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.top, 600.0)
-                        .padding(.horizontal, 20.0)
-                    
-                    /*Text("EcoSpark")
-                        .font(.system(size: 45))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.679, green: 0.78, blue: 0.437))
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 650.0)*/
-                }
-                
-                /*HStack {
-                    Text("Monthly Footprint")
-                        .font(.system(size: 25))
-                        .fontWeight(.black)
-                    Spacer()
-                    
-                    Button {
-                        showNewTask = true
-                    } label: {
-                        Text("+")
-                            .font(.title)
-                            .fontWeight(.bold)
+                    .toolbar {
+                        ToolbarItem(placement: .bottomBar) {
+                            NavigationLink(destination: EcoSpark()) {
+                                Image("im1")
+                                    .resizable()
+                                    .padding(.bottom, 30.0)
+                                    .scaledToFit()
+                                    .frame(width: 250, height: 250)
+                            }
+                            
+                        }
                     }
-                } /*Closes Hstack*/
-                .padding()
-                Spacer()*/
                 
-            } /*Closes Vstack*/
+            } /*Closes Zstack*/
             
             
         } /*Closes Navigation Stack*/
@@ -75,5 +54,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: MonthData.self, inMemory: true)
 }
