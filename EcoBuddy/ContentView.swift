@@ -17,47 +17,49 @@ struct ContentView: View {
                 Color(red: 0.748, green: 0.854, blue: 0.857)
                     .ignoresSafeArea()
                 Spacer()
-                NavigationLink(destination: TripEditor()) {
-                    Text("36")
-                        .shadow(radius: 4)
-                        .font(.custom(
-                            "Earth And Sky", size: 140))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.535, green: 0.59, blue: 0.376))
-                        .multilineTextAlignment(.center)
-                        .padding(.all)
-                        .padding(.bottom, 50.0)
-                }
-                Text("Total Carbon Footprint")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color(red: 0.486, green: 0.429, blue: 0.443))
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 115.0)
-                Spacer()
-                    .toolbar {
-                        ToolbarItem(placement: .bottomBar) {
-                            NavigationLink(destination: Links()) {
-                                Image("img2")
-                                    .resizable()
-                                    .padding(.bottom, 30.0)
-                                    .scaledToFit()
-                                    .frame(width: 400, height: 250)
-                            }
-                            
-                        }
-                    }
-                
-                Spacer()
-                    .toolbar {
+                VStack {
+                    
                         NavigationLink(destination: EcoSpark()) {
                             Image("ig1")
                                 .resizable()
-                                .padding(.top, 50.0)
+                                .padding(.top, 10.0)
                                 .scaledToFit()
                                 .frame(width: 400, height: 150)
                         }
+                    
+                    NavigationLink(destination: TripEditor()) {
+                        Text("36")
+                            .shadow(radius: 4)
+                            .font(.custom(
+                                "Earth And Sky", size: 140))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color(red: 0.535, green: 0.59, blue: 0.376))
+                            .multilineTextAlignment(.center)
+                            .padding([ .leading, .trailing])
+                            .padding(.top, 100.0)
                     }
+                    Text("Total Carbon Footprint")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color(red: 0.486, green: 0.429, blue: 0.443))
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom, 50.0)
+                    Spacer()
+                        .toolbar {
+                            ToolbarItem(placement: .bottomBar) {
+                                NavigationLink(destination: Links()) {
+                                    Image("img2")
+                                        .resizable()
+                                        .padding(.bottom, 30.0)
+                                        .scaledToFit()
+                                        .frame(width: 400, height: 250)
+                                }
+                                
+                            }
+                        }
+                }
+                    Spacer()
+                    
                 
             } /*Closes Zstack*/
             
