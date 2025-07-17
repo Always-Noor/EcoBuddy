@@ -18,9 +18,14 @@ struct TripEditor: View {
             VStack() {
                 
                 List(items) { item in
-                    Text("\(item.name) \(item.carbonFootprint)")
+                    HStack {
+                        Text(item.name)
+                        Spacer()
+                        Text("\(item.carbonFootprint)")
+                    }
                 }
                 .background(Color.white)
+                .listStyle(PlainListStyle())
 
                 Picker("Select an item", selection: $selectedItem) {
                     ForEach(availableItems.keys.sorted(), id: \.self) { item in
