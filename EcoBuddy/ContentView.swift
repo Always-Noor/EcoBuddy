@@ -18,7 +18,8 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 Spacer()
                 NavigationLink(destination: TripEditor()) {
-                    Text("356")
+                    Text("36")
+                        .shadow(radius: 4)
                         .font(.custom(
                             "Earth And Sky", size: 140))
                         .fontWeight(.bold)
@@ -27,7 +28,12 @@ struct ContentView: View {
                         .padding(.all)
                         .padding(.bottom, 50.0)
                 }
-                
+                Text("Total Carbon Footprint")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color(red: 0.486, green: 0.429, blue: 0.443))
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 120.0)
                 Spacer()
                     .toolbar {
                         ToolbarItem(placement: .bottomBar) {

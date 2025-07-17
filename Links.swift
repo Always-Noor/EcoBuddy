@@ -14,6 +14,19 @@ struct Links: View {
             Color(red: 0.748, green: 0.854, blue: 0.857)
                 .ignoresSafeArea()
             
+            Text("Resources To Learn More")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(Color(red: 0.535, green: 0.59, blue: 0.376))
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 700.0)
+                .padding(.horizontal, 10.0)
+            
+            Image("Image2")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fit)
+                .padding(.bottom, 470.0)
+                .frame(width: 300.0, height: 600.0)
             Spacer()
             Link(destination: URL(string: "https://carbonliteracy.com/fast-fashions-carbon-footprint/")!) {
                 Text("Carbon Literacy Project")
@@ -21,13 +34,36 @@ struct Links: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color(red: 0.611, green: 0.677, blue: 0.436))
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 600.0)
+                    .padding(.bottom, 290.0)
             }
             Text("This article talks about about the significant hidden costs of fast fashion, and motivate action by showing how thoughtful consumer choices and systemic shifts in the industry can advance sustainability.")
                 .font(.title3)
                 .multilineTextAlignment(.center)
-                .padding(.bottom, 400.0)
+                .padding(.bottom, 90.0)
                 .padding(.horizontal)
+            
+            Spacer()
+            Image("Image")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fit)
+                .padding(.top, 280.0)
+                .padding(.bottom, 30.0)
+                .frame(width: 400.0, height: 450.0)
+            Spacer()
+            Link(destination: URL(string: "https://www.ethicalconsumer.org/fashion-clothing/carbon-cost-clothing")!) {
+                Text("The Carbon Cost of Clothing")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(red: 0.611, green: 0.677, blue: 0.436))
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 450.0)
+                    .padding(.horizontal, 15.0)
+            }
+            Text("This article informs and guides consumers to learn more about the climate impacts of clothing and provide practical actions they can take to reduce that impact.")
+                .font(.title3)
+                .multilineTextAlignment(.center)
+                .padding(.top, 620.0)
+                .padding(.horizontal, 25.0)
             
             
         } //closes ZStack
