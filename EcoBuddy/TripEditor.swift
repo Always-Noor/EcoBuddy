@@ -35,7 +35,7 @@ struct TripEditor: View {
                 .pickerStyle(MenuPickerStyle())
                 .padding(.horizontal)
 
-                Button("Add Item") {
+                Button("Save") {
                     if let footprint = availableItems[selectedItem] {
                         items.append(InventoryItem(name: selectedItem, carbonFootprint: footprint))
                     }
