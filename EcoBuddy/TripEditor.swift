@@ -19,6 +19,7 @@ struct TripEditor: View {
                 
                 List(items) { item in
                     HStack {
+                        Text("+")
                         Text(item.name)
                         Spacer()
                         Text("\(item.carbonFootprint)")
