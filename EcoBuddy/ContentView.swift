@@ -29,18 +29,19 @@ struct ContentView: View {
                         .padding(.bottom, 50.0)
                 }
                 Text("Total Carbon Footprint")
-                    .font(.title2)
+                    .font(.title)
                     .fontWeight(.semibold)
                     .foregroundColor(Color(red: 0.486, green: 0.429, blue: 0.443))
                     .multilineTextAlignment(.center)
-                    .padding(.top, 120.0)
+                    .padding(.top, 115.0)
                 Spacer()
                     .toolbar {
                         ToolbarItem(placement: .bottomBar) {
                             NavigationLink(destination: EcoSpark()) {
                                 Image("im1")
                                     .resizable()
-                                    .padding(.bottom, 30.0)
+                                    .padding(.bottom, 50.0)
+                                    .padding(.top)
                                     .scaledToFit()
                                     .frame(width: 250, height: 250)
                             }
