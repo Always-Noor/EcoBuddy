@@ -6,7 +6,7 @@ struct TripEditor: View {
         "Dress": 22,
         "Jeans": 17,
         "Purse": 14,
-        "T-shirt": 7,
+        "T-Shirt": 7,
         "Long Sleeve Shirt": 10
     ]
     

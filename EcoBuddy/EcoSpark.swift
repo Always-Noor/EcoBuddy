@@ -43,7 +43,7 @@ struct EcoSpark: View {
                 Spacer()
                 Spacer()
                 Text("EcoSpark")
-                    .font(.system(size: 36, weight: .bold))
+                    .font(.system(size: 40, weight: .bold))
                     .foregroundColor(Color(red: 0.18, green: 0.27, blue: 0.24))
                 Spacer()
                 Text(chosenMessage)
