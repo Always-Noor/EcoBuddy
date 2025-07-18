@@ -27,6 +27,17 @@ struct Links: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(.bottom, 470.0)
                 .frame(width: 300.0, height: 600.0)
+            
+            Link(destination: URL(string: "https://www.ethicalconsumer.org/fashion-clothing/carbon-cost-clothing")!) {
+                Text("The Carbon Cost of Clothing")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(red: 0.611, green: 0.677, blue: 0.436))
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 420.0)
+                    .padding(.horizontal, 15.0)
+            }
+            
             Spacer()
             Link(destination: URL(string: "https://carbonliteracy.com/fast-fashions-carbon-footprint/")!) {
                 Text("Carbon Literacy Project")
@@ -51,15 +62,7 @@ struct Links: View {
                 .padding(.bottom, 40.0)
                 .frame(width: 400.0, height: 450.0)
             Spacer()
-            Link(destination: URL(string: "https://www.ethicalconsumer.org/fashion-clothing/carbon-cost-clothing")!) {
-                Text("The Carbon Cost of Clothing")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color(red: 0.611, green: 0.677, blue: 0.436))
-                    .multilineTextAlignment(.center)
-                    .padding(.top, 420.0)
-                    .padding(.horizontal, 15.0)
-            }
+            
             Text("This article informs and guides consumers to learn more about the climate impacts of clothing and provide practical actions they can take to reduce that impact.")
                 .font(.body)
                 .multilineTextAlignment(.center)
